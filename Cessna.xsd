@@ -1,0 +1,138 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Checklists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AfterStartChecklist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="WingFlaps"/>
+              <xs:element type="xs:string" name="AvionicsMasterSwitch"/>
+              <xs:element type="xs:string" name="ATIS"/>
+              <xs:element type="xs:string" name="Altimeter"/>
+              <xs:element type="xs:string" name="HeadingIndicator"/>
+              <xs:element type="xs:string" name="Transponder"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TaxiChecklist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Brakes"/>
+              <xs:element type="xs:string" name="TurnCoordinator"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BeforeTakeoff">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ParkingBrake"/>
+              <xs:element type="xs:string" name="DoorsAndWindows"/>
+              <xs:element type="xs:string" name="FlightInstruments"/>
+              <xs:element name="FuelQuantity">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="check"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="FuelSelector"/>
+              <xs:element name="Throttle">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:short" name="RPM"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Radio">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="check"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="Autopilot"/>
+              <xs:element type="xs:string" name="ParkingBrakes"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NormalTakeoff">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="WingFlaps"/>
+              <xs:element type="xs:byte" name="ElevatorControl"/>
+              <xs:element type="xs:byte" name="ClimbSpeed"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ShortFieldTakeOff">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WingFlaps">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:byte" name="set"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="Throttle"/>
+              <xs:element type="xs:string" name="Mixture"/>
+              <xs:element type="xs:string" name="ElevatorControl"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AfterTakeOffChecklist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OilPressure">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="check"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="Flaps"/>
+              <xs:element type="xs:string" name="AircraftLighting"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EnrouteClimb">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="Airspeed"/>
+              <xs:element type="xs:string" name="Throttle"/>
+              <xs:element type="xs:string" name="Mixture"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cruise">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Power"/>
+              <xs:element type="xs:string" name="ElevatorTrim"/>
+              <xs:element type="xs:string" name="Mixture"/>
+              <xs:element name="LandingLight">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="check"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

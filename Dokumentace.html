@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dokumentace - Značkovací jazyky</title>
+    </head>
+    <body>
+        <header>
+           <h1>Dokumentace</h1>
+        </header>
+        <nav id="menu">
+            <h2 style="text-decoration:underline;">Obsah</h2>
+            <ul>
+                <li><a href="#uvod" style="text-decoration:none">Úvod</a></li>
+                <li><a href="#obsah" style="text-decoration:none">Obsah s odkazy</a></li>
+                <li><a href="#metodika" style="text-decoration:none">Metodika</a></li>
+                <li><a href="#atributy" style="text-decoration:none">Elementy a Atributy</a></li>
+                <li><a href="#popis" style="text-decoration:none">Popis transformace</a></li>
+                <li><a href="#zaver" style="text-decoration:none">Závěr</a></li>    
+                 
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <section id="uvod"><h2 style="text-decoration:underline;">Úvod</h2>
+                    <p>V předmětu Značkovací jazyk jsme se zabývali tvorbou dokumentu XML, dále tvorbou schéma XSD a transformaci do XSL.
+                    Nakonec se vytvoří HTML dokumentace.</p>
+                </section>
+                <section id="metodika"><h2 style="text-decoration:underline;">Metodika</h2>
+                    <p>Pro tvorbu jsem použával programy, které nám byly doporučeny na přednáškách. Jedá se o Oxygent XML Editor, dále je to XML Copy Editor
+                    plus jsem používal nějaké online editory.XML jsem vytvářel v prvně jmenovaných editorech, pro převod do XSD jsem používal online generator 
+                    na stránkách <a href="http://www.freeformatter.com/xsd-generator.html#ad-output">Freeformatter.com</a>. Soubor XLS jsem opět vytvářel v programu 
+                        Oxygen. 
+                    </p>
+                </section>
+                <section id="atributy"><h2 style="text-decoration:underline;">Elementy a Atributy</h2>
+                    <table border="1">
+                       <tbody>
+                           <tr>
+                               <th>Názvy</th>
+                               <th>Popis</th>
+                           </tr> 
+                           <tr>
+                   <td><b>After Start Checklist</b></td>
+                   <td>1.Element obsahující 6 kroku checklistu </td>
+                           </tr>   
+                           <tr>
+                               <td>Wing Flaps</td>
+                               <td>Potomek prvního elementu, popisující nastavení klapek</td>
+                           </tr> 
+                           <tr>
+                               <td>Avionics Master Switch</td>
+                               <td>Potomek prvního elementu, popisující zapnutí AMS</td>
+                           </tr>  
+                           <tr>
+                               <td>ATIS</td>
+                               <td>Potomek prvního elementu, popisující obdržení zprávy ATIS</td>
+                           </tr>  
+                           <tr>
+                               <td>Altimeter</td>
+                               <td>Potomek prvního elementu, popisující nastavení výškoměru</td>
+                           </tr>  
+                           <tr>
+                               <td>Heading Indicator</td>
+                               <td>Potomek prvního elementu, popisující nastavení směrového ukazatele</td>
+                           </tr>  
+                           <tr>
+                               <td>Transponder</td>
+                               <td>Potomek prvního elementu, popisujíci zapnutí odpovídače do polohy STBY</td>
+                           </tr>  
+                           <tr>
+                   <td><b>Taxi Checklist</b></td>
+                   <td>2. Element, obsahující 2 kroky</td>
+                           </tr>  
+                           <tr>
+                               <td>Brakes</td>
+                               <td>Potomek druhého elementu, obsahující informaci o testu brzd</td>
+                           </tr>  
+                           <tr>
+                               <td>Turn Coordinator</td>
+                               <td>Potomek druhého elementu, obsahující informaci o zkoušce ovládání</td>
+                           </tr>  
+                           <tr>
+                    <td><b>Before Takeoff</b></td>
+                    <td>3. Element obsahující 9. kroků</td>
+                           </tr>  
+                           <tr>
+                               <td>Parking Brake</td>
+                               <td>Potomek třetího elementu, obsahující informaci o uvolnění brzd</td>
+                           </tr>  
+                           <tr>
+                               <td>Doors And Windows</td>
+                               <td>Potomek třetího elementu obsahující informace o zavření dveří a oken</td> 
+                           </tr>  
+                           <tr>
+                               <td>Flight Instruments</td>
+                               <td>Potomek třetího elementu, obsahující informace o letových instrukcích</td>
+                           </tr>  
+                           <tr>
+                               <td>Fuel Quantity</td>
+                               <td>Potomek třetího elementu obsahujíci informace o kontrole množství paliva</td>
+                           </tr>  
+                           <tr>
+                               <td>check</td>
+                               <td>Atribut elementu FuelQuantity,který kontoluje množství </td>
+                           </tr> 
+                           <tr>
+                               <td>Fuel Selector</td>
+                               <td>Potomek třetího elementu obsahujíci informace o nastavení nádrží</td>
+                           </tr> 
+                           <tr>
+                               <td>Throttle</td>
+                               <td>Potomek třetího elementu obsahujíci informace o otáčkách motoru</td>
+                           </tr> 
+                           <tr>
+                               <td>RPM</td>
+                               <td>Atribut elementu Throttle, kontolující otáčky motoru</td>
+                           </tr> 
+                           <tr>
+                               <td>Radio</td>
+                               <td>Potomek třetího elementu obsahujíci informace o radiu</td>    
+                           </tr> 
+                           <tr>
+                               <td>check</td>
+                               <td>Atribut elementu Radio, kontrolující zapnutí radia</td>    
+                           </tr> 
+                           <tr>
+                               <td>Autopilot</td>
+                               <td>Potomek třetího elementu, obsahujíci informace o vypnutí autopilota</td>
+                           </tr> 
+                           <tr>
+                               <td>Parking Brakes</td>
+                               <td>Potomek třetího elementu, obsahujíci informace o uvolnění brzd</td>
+                           </tr> 
+                           <tr>
+                 <td><b>Normal Takeoff</b></td>
+                 <td>4. Element obsahující 3. kroky</td>
+                           </tr> 
+                           <tr>
+                               <td>Wing Flaps</td>
+                               <td>Potomek čtvrtého elementu, obsahující informace o nastavení klapek</td>
+                           </tr> 
+                           <tr>
+                               <td>Elevator Control</td>
+                               <td>Potomek čtvrtého elementu, obsahující informace o vzletové rychlosti</td>
+                           </tr> 
+                           <tr>
+                               <td>Climb Speed</td>
+                               <td>Potomek čtvrtého elementu, obsahující informace o rychlosti pro stoupání</td>
+                           </tr> 
+                           <tr>
+                 <td><b>Short Field TakeOff</b></td>
+                 <td>5. Element obsahující 4. kroky</td>
+                           </tr> 
+                           <tr>
+                               <td>Wing Flaps</td>
+                               <td>Potomek pátého elementu, obsahující informace o nastavení klapek</td>
+                           </tr> 
+                           <tr>
+                               <td>set</td>
+                               <td>Atribut elementu WingFlaps, obsahující nastavení úhlu klapek</td>
+                           </tr> 
+                           <tr>
+                               <td>Throttle</td>
+                               <td>Potomek pátého elementu, obsahující informace o nastavení plynu</td>
+                           </tr> 
+                           <tr>
+                               <td>Mixture</td>
+                               <td>Potomek pátého elementu, obsahující informace o směsi paliva</td>
+                           </tr> 
+                           <tr>
+                               <td>Elevator Control</td>
+                               <td>Potomek pátého elementu, obsahující informace o kontole</td>
+                           </tr> 
+                           <tr>
+                 <td><b>After TakeOff Checklist</b></td>
+                 <td>6. Element obsahující 3. kroky</td>
+                           </tr> 
+                           <tr>
+                               <td>Oil Pressure</td>
+                               <td>Potomek šestého elementu, obsahující informace o tlaku oleje</td>
+                           </tr> 
+                           <tr>
+                               <td>check</td>
+                               <td>Atribut elementu OilPressure, kontolující tlak oleje</td>
+                           </tr>
+                           <tr>
+                               <td>Flaps</td>
+                               <td>Potomek šestého elementu, obsahující informace o nastavení klapek</td>
+                           </tr> 
+                           <tr>
+                               <td>Aircraft Lighting</td>
+                               <td>Potomek šestého elementu, obsahující informace o zapnutí osvětlení letadla</td>
+                           </tr> 
+                           <tr>
+                <td><b>Enroute Climb</b></td>
+                <td>7. Element obsahující 3. kroky</td>
+                           </tr> 
+                           <tr>
+                               <td>Airspeed</td>
+                               <td>Potomek sedmého elementu, obsahující informace o rychlosti pro stoupání</td>
+                           </tr> 
+                           <tr>
+                               <td>Throttle</td>
+                               <td>Potomek sedmého elementu, obsahující informace o množství plynu</td>
+                           </tr> 
+                           <tr>
+                               <td>Mixture</td>
+                               <td>7. Element obsahující 3. krokye o směsi paliva</td>
+                           </tr> 
+                           <tr>
+                 <td><b>Cruise</b></td>
+                 <td>8. Element obsahující 4. kroky</td>
+                           </tr> 
+                           <tr>
+                               <td>Power</td>
+                               <td>Potomek osmého elementu, obsahující informace o baterii</td>
+                           </tr> 
+                           <tr>
+                               <td>Elevator Trim</td>
+                               <td>Potomek osmého elementu, obsahující informace o nastavení trimu</td>
+                           </tr> 
+                           <tr>
+                               <td>Mixture</td>
+                               <td>Potomek osmého elementu, obsahující informace o množství směsi</td>
+                           </tr> 
+                           <tr>
+                               <td>Landing Light</td>
+                               <td>Potomek osmého elementu, obsahující informace o zapnutí přistávacích světel</td>
+                           </tr> 
+                           <tr>
+                               <td>check</td>
+                               <td>Atribut elementu LandingLight, konrolující zapnutí světel při přistání</td>
+                           </tr> 
+                       </tbody>                    
+                    </table>
+                    
+                </section>
+                <section id="popis"><h2 style="text-decoration:underline;">Popis</h2>
+                <p>dfdsfsdf</p>
+                </section>
+                <section id="zaver"><h2 style="text-decoration:underline;">Závěr</h2>
+                <p>Závěrem bych chtěl prohlásit že asi nejtěžší byl pro mě převod do XSL, nakonec jsem dobrý postup jak na to našel na stránkách 
+                    <a href="https://www.w3schools.com">W3School.com</a>                  
+                </p>
+                    
+                </section>                   
+            </article>         
+        </main>
+        <footer id="zapati" style="border-top:3px solid black;">
+                <table>
+                    <tr>
+                        <td>Libor Kosek</td>
+                    </tr> 
+                </table>
+        </footer>      
+    </body>
+</html>

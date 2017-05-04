@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Checklists>
+      <AfterStartChecklist>
+           <WingFlaps>UP</WingFlaps>
+           <AvionicsMasterSwitch>ON</AvionicsMasterSwitch>
+           <ATIS>Obtain</ATIS>
+           <Altimeter>Set</Altimeter>
+           <HeadingIndicator>Set</HeadingIndicator>
+           <Transponder>STBY</Transponder>
+      </AfterStartChecklist>
+      <TaxiChecklist>
+           <Brakes>Test</Brakes>
+           <TurnCoordinator>Operating</TurnCoordinator>
+      </TaxiChecklist>
+      <BeforeTakeoff>
+           <ParkingBrake>SET</ParkingBrake>
+           <DoorsAndWindows>Closed and Locked</DoorsAndWindows>
+           <FlightInstruments>Set and Checked</FlightInstruments>
+           <FuelQuantity check="checked"/>
+           <FuelSelector>Both</FuelSelector>
+           <Throttle RPM="1800"/>
+           <Radio check = "checked"/>
+           <Autopilot>OFF</Autopilot>
+           <ParkingBrakes>Release</ParkingBrakes>
+        </BeforeTakeoff>
+        <NormalTakeoff>
+           <WingFlaps>0-10</WingFlaps>
+           <ElevatorControl>55</ElevatorControl>
+           <ClimbSpeed>75</ClimbSpeed>
+        </NormalTakeoff>
+        <ShortFieldTakeOff>
+           <WingFlaps set="10"/>
+           <Throttle>Full</Throttle>
+           <Mixture>Rich</Mixture>
+           <ElevatorControl>Slightly Tail Law</ElevatorControl>
+        </ShortFieldTakeOff>
+        <AfterTakeOffChecklist>
+           <OilPressure check="checked"/>
+           <Flaps>Retract</Flaps>
+           <AircraftLighting>As Required</AircraftLighting>
+        </AfterTakeOffChecklist>
+        <EnrouteClimb>
+           <Airspeed>75</Airspeed>
+           <Throttle>Full</Throttle>
+           <Mixture>Rich</Mixture>
+        </EnrouteClimb>
+        <Cruise>
+            <Power>Set per AFM</Power>
+            <ElevatorTrim>Adjust</ElevatorTrim>
+            <Mixture>Lean abive 3000</Mixture>
+            <LandingLight check="checked"/>
+        </Cruise>
+</Checklists>
